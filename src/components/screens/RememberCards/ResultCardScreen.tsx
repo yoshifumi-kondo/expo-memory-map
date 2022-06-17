@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { Text } from 'react-native';
 
-const ResultCardScreen = () => {
+const ResultCardScreen: FC = () => {
   return <Text>ResultCardScreen</Text>;
 };
 

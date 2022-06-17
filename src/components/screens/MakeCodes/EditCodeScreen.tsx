@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { Text } from 'react-native';
 
-const EditCodeScreen = () => {
+const EditCodeScreen: FC = () => {
   return <Text>EditCodeScreen</Text>;
 };
 

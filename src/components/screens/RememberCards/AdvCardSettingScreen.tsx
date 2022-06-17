@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { Text } from 'react-native';
 
-const AdvCardSettingScreen = () => {
+const AdvCardSettingScreen: FC = () => {
   return <Text>AdvCardSettingScreen</Text>;
 };
 

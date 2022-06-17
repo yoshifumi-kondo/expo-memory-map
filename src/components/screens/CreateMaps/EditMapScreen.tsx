@@ -1,7 +1,12 @@
-import { Text } from 'react-native';
+import { FC } from 'react';
+import { Text, View } from 'react-native';
 
-const EditMapScreen = () => {
-  return <Text>EditMapScreen</Text>;
+const EditMapScreen: FC = () => {
+  return (
+    <View>
+      <Text>EditMapScreen</Text>
+    </View>
+  );
 };
 
 export default EditMapScreen;
