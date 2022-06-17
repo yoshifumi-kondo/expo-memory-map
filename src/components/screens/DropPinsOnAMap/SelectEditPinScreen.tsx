@@ -1,23 +1,22 @@
 import { FC } from 'react';
 import { Text, View } from 'react-native';
 
-const SelectMapScreen: FC = () => {
-  const maps = Array(5).fill('v');
-
+const SelectEditPinScreen: FC = () => {
+  const maps = Array(12).fill('v');
   return (
     <View>
       <View>
         {maps.map((_v, i) => (
           <View key={i}>
             <View>
-              <Text>MapImage</Text>
-              <Text>MapAmount</Text>
+              <Text>Pin</Text>
             </View>
-            <Text>map_name{i}</Text>
+            <View>
+              <Text>map_name</Text>
+            </View>
           </View>
         ))}
       </View>
-
       <View>
         <Text>Create</Text>
       </View>
@@ -25,4 +24,4 @@ const SelectMapScreen: FC = () => {
   );
 };
 
-export default SelectMapScreen;
+export default SelectEditPinScreen;

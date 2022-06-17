@@ -1,27 +1,30 @@
 import { FC } from 'react';
 import { Text, View } from 'react-native';
 
-const EditCodeScreen: FC = () => {
-  const codes = Array(12).fill('v');
+const CheckMapScreen: FC = () => {
+  const pins = Array(5).fill('v');
 
   return (
     <View>
       <View>
         <View>
           <View>
-            <Text>name</Text>
+            <Text>map</Text>
           </View>
           <View>
-            <Text>code</Text>
+            <Text>pin</Text>
           </View>
         </View>
-        {codes.map((_v, i) => (
+        {pins.map((_v, i) => (
           <View key={i}>
             <View>
-              <Text>name_form</Text>
+              <Text>map_name</Text>
             </View>
             <View>
-              <Text>{i}+code_name_form</Text>
+              <Text>pin</Text>
+            </View>
+            <View>
+              <Text>hide</Text>
             </View>
           </View>
         ))}
@@ -33,4 +36,4 @@ const EditCodeScreen: FC = () => {
   );
 };
 
-export default EditCodeScreen;
+export default CheckMapScreen;

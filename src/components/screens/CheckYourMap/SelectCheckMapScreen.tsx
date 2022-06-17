@@ -1,9 +1,8 @@
 import { FC } from 'react';
 import { Text, View } from 'react-native';
 
-const SelectMapScreen: FC = () => {
+const SelectCheckMapScreen: FC = () => {
   const maps = Array(5).fill('v');
-
   return (
     <View>
       <View>
@@ -25,4 +24,4 @@ const SelectMapScreen: FC = () => {
   );
 };
 
-export default SelectMapScreen;
+export default SelectCheckMapScreen;
