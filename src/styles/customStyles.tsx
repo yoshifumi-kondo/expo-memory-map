@@ -10,17 +10,17 @@ export const customColor = {
 
 const customStyles = StyleSheet.create({
   defaultText: {
-    fontFamily: 'Oswald_400Regular',
+    fontFamily: 'Oswald_700Bold',
     fontStyle: 'normal',
   },
   boldText: {
     fontFamily: 'Oswald_700Bold',
   },
   largeFont: {
-    fontSize: 40,
+    fontSize: 48,
   },
   mediumFpnt: {
-    fontSize: 24,
+    fontSize: 28,
   },
   smallFont: {
     fontSize: 16,
