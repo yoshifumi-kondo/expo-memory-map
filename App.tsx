@@ -14,16 +14,39 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SelectCheckMapScreen from '@components/screens/CheckYourMap/SelectCheckMapScreen';
 import CheckMapScreen from '@components/screens/CheckYourMap/CheckMapScreen';
+import { customColor } from '@styles/customStyles';
+import { useFonts, Oswald_400Regular, Oswald_700Bold } from '@expo-google-fonts/oswald';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Oswald_400Regular,
+    Oswald_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return <></>;
+  }
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='CheckMapScreen'>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: customColor.fifth,
+            },
+            headerTitleStyle: {
+              color: 'white',
+            },
+            headerTitle: 'Memory-map',
+            headerBackTitle: 'Back',
+            headerTintColor: '#fff',
+          }}
+          initialRouteName='TopScreen'
+        >
           {/* Top */}
-          <Stack.Screen name='Top' component={TopSceen} />
+          <Stack.Screen name='TopScreen' component={TopSceen} />
 
           {/* Create map */}
           <Stack.Screen name='SelectMapScreen' component={SelectMapScreen} />
