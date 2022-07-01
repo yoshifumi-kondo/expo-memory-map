@@ -16,8 +16,9 @@ import SelectCheckMapScreen from '@components/screens/CheckYourMap/SelectCheckMa
 import CheckMapScreen from '@components/screens/CheckYourMap/CheckMapScreen';
 import { customColor } from '@styles/customStyles';
 import { useFonts, Oswald_400Regular, Oswald_700Bold } from '@expo-google-fonts/oswald';
+import { RootStackParamList } from '@customTypes/type';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -34,12 +35,13 @@ export default function App() {
         <Stack.Navigator
           screenOptions={{
             headerStyle: {
-              backgroundColor: customColor.fifth,
+              backgroundColor: customColor.secound,
             },
             headerTitleStyle: {
               color: 'white',
+              fontFamily: 'Oswald_700Bold',
             },
-            headerTitle: 'Memory-map',
+            headerTitle: 'Memory Map',
             headerBackTitle: 'Back',
             headerTintColor: '#fff',
           }}

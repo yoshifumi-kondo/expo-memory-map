@@ -1,8 +1,12 @@
+import { RootStackParamList } from '@customTypes/type';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import customStyles, { customColor } from '@styles/customStyles';
 import { FC } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const TopSceen: FC = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList, 'TopScreen'>>();
   return (
     <View style={styles.container}>
       <View>
@@ -14,21 +18,36 @@ const TopSceen: FC = () => {
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        <View style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('SelectMapScreen')}
+        >
           <Text style={[customStyles.defaultText, customStyles.mediumFpnt]}>Create Maps</Text>
-        </View>
-        <View style={styles.button}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('SelectEditPinScreen')}
+        >
           <Text style={[customStyles.defaultText, customStyles.mediumFpnt]}>Write on a map</Text>
-        </View>
-        <View style={styles.button}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('SelectCodeScreen')}
+        >
           <Text style={[customStyles.defaultText, customStyles.mediumFpnt]}>Make codes</Text>
-        </View>
-        <View style={styles.button}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('CardSettingScreen')}
+        >
           <Text style={[customStyles.defaultText, customStyles.mediumFpnt]}>Remember Cards</Text>
-        </View>
-        <View style={styles.button}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('SelectMapScreen')}
+        >
           <Text style={[customStyles.defaultText, customStyles.mediumFpnt]}>Check your Maps</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
