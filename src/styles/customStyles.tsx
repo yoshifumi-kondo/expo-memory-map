@@ -19,7 +19,7 @@ const customStyles = StyleSheet.create({
   largeFont: {
     fontSize: 48,
   },
-  mediumFpnt: {
+  mediumFont: {
     fontSize: 28,
   },
   smallFont: {

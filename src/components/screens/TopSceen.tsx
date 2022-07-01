@@ -22,31 +22,39 @@ const TopSceen: FC = () => {
           style={styles.button}
           onPress={() => navigation.navigate('SelectMapScreen')}
         >
-          <Text style={[customStyles.defaultText, customStyles.mediumFpnt]}>Create Maps</Text>
+          <Text style={[customStyles.defaultText, customStyles.mediumFont, styles.buttonText]}>
+            Create Maps
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('SelectEditPinScreen')}
         >
-          <Text style={[customStyles.defaultText, customStyles.mediumFpnt]}>Write on a map</Text>
+          <Text style={[customStyles.defaultText, customStyles.mediumFont, styles.buttonText]}>
+            Write on a map
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('SelectCodeScreen')}
         >
-          <Text style={[customStyles.defaultText, customStyles.mediumFpnt]}>Make codes</Text>
+          <Text style={[customStyles.defaultText, customStyles.mediumFont, styles.buttonText]}>
+            Make codes
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('CardSettingScreen')}
         >
-          <Text style={[customStyles.defaultText, customStyles.mediumFpnt]}>Remember Cards</Text>
+          <Text style={[customStyles.defaultText, customStyles.mediumFont, styles.buttonText]}>
+            Remember Cards
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('SelectMapScreen')}
         >
-          <Text style={[customStyles.defaultText, customStyles.mediumFpnt]}>Check your Maps</Text>
+          <Text style={[customStyles.defaultText, customStyles.mediumFont]}>Check your Maps</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -76,7 +84,9 @@ const styles = StyleSheet.create({
   },
   topLogoText: {
     position: 'absolute',
+    color: customColor.secound,
   },
+  buttonText: { color: customColor.secound },
   buttonContainer: {
     justifyContent: 'space-between',
     height: '60%',
