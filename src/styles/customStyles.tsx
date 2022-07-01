@@ -25,6 +25,9 @@ const customStyles = StyleSheet.create({
   smallFont: {
     fontSize: 16,
   },
+  fontSecond: {
+    color: customColor.secound,
+  },
 });
 
 export default customStyles;
