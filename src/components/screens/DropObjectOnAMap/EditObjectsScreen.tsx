@@ -1,27 +1,28 @@
 import { FC } from 'react';
 import { Text, View } from 'react-native';
 
-const SelectEditPinScreen: FC = () => {
-  const maps = Array(12).fill('v');
+const EditObjectsScreen: FC = () => {
+  const pins = Array(12).fill('v');
+
   return (
     <View>
       <View>
-        {maps.map((_v, i) => (
+        {pins.map((_v, i) => (
           <View key={i}>
             <View>
-              <Text>Pin</Text>
+              <Text>{i}+map_name</Text>
             </View>
             <View>
-              <Text>map_name</Text>
+              <Text>Form</Text>
             </View>
           </View>
         ))}
       </View>
       <View>
-        <Text>Create</Text>
+        <Text>Save</Text>
       </View>
     </View>
   );
 };
 
-export default SelectEditPinScreen;
+export default EditObjectsScreen;

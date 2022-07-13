@@ -8,8 +8,6 @@ import CardSettingScreen from '@components/screens/RememberCards/CardSettingScre
 import RememberCardScreen from '@components/screens/RememberCards/RememberCardScreen';
 import ResultCardScreen from '@components/screens/RememberCards/ResultCardScreen';
 import TopSceen from '@components/screens/TopSceen';
-import EditPinScreen from '@components/screens/DropPinsOnAMap/EditPinScreen';
-import SelectEditPinScreen from '@components/screens/DropPinsOnAMap/SelectEditPinScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SelectCheckMapScreen from '@components/screens/CheckYourMap/SelectCheckMapScreen';
@@ -17,6 +15,8 @@ import CheckMapScreen from '@components/screens/CheckYourMap/CheckMapScreen';
 import { customColor } from '@styles/customStyles';
 import { useFonts, Oswald_400Regular, Oswald_700Bold } from '@expo-google-fonts/oswald';
 import { RootStackParamList } from '@customTypes/type';
+import SelectEditObjectsScreen from '@components/screens/DropObjectOnAMap/SelectEditObjectsScreen';
+import EditObjectsScreen from '@components/screens/DropObjectOnAMap/EditObjectsScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -55,8 +55,8 @@ export default function App() {
           <Stack.Screen name='EditMapScreen' component={EditMapScreen} />
 
           {/* Drop pins on a map */}
-          <Stack.Screen name='SelectEditPinScreen' component={SelectEditPinScreen} />
-          <Stack.Screen name='EditPinScreen' component={EditPinScreen} />
+          <Stack.Screen name='SelectEditObjectsScreen' component={SelectEditObjectsScreen} />
+          <Stack.Screen name='EditObjectsScreen' component={EditObjectsScreen} />
 
           {/* Make codes */}
           <Stack.Screen name='SelectCodeScreen' component={SelectCodeScreen} />

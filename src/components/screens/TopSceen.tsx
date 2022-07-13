@@ -28,10 +28,10 @@ const TopSceen: FC = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('SelectEditPinScreen')}
+          onPress={() => navigation.navigate('SelectEditObjectsScreen')}
         >
           <Text style={[customStyles.defaultText, customStyles.mediumFont, styles.buttonText]}>
-            Write on a map
+            Drop objects on a map
           </Text>
         </TouchableOpacity>
         <TouchableOpacity

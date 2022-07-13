@@ -23,7 +23,7 @@ const customStyles = StyleSheet.create({
     fontSize: 28,
   },
   smallFont: {
-    fontSize: 16,
+    fontSize: 20,
   },
   fontSecond: {
     color: customColor.secound,

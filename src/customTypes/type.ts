@@ -4,8 +4,8 @@ export type RootStackParamList = {
   TopScreen: undefined;
   SelectMapScreen: undefined;
   EditMapScreen: undefined;
-  SelectEditPinScreen: undefined;
-  EditPinScreen: undefined;
+  SelectEditObjectsScreen: undefined;
+  EditObjectsScreen: undefined;
   SelectCodeScreen: undefined;
   EditCodeScreen: undefined;
   CardSettingScreen: undefined;

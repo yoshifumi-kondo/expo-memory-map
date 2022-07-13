@@ -5,44 +5,44 @@ import { FC } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-const SelectMapScreen: FC = () => {
-  const maps = Array(10).fill('v');
-  const navigation = useNavigation<NavigationProp<RootStackParamList, 'SelectMapScreen'>>();
+const SelectEditObjectsScreen: FC = () => {
+  const maps = Array(12).fill('v');
+  const navigation = useNavigation<NavigationProp<RootStackParamList, 'SelectEditObjectsScreen'>>();
 
   return (
     <>
       <ScrollView>
         <View style={styles.container}>
-          <View style={styles.mapsContainer}>
+          <View>
             {maps.map((_v, i) => (
-              <TouchableOpacity
-                key={i}
-                onPress={() => navigation.navigate('EditMapScreen')}
-                style={styles.mapContainer}
-              >
-                <View style={styles.mapImageContainer}>
-                  <Image source={require('@assets/map.png')} style={styles.img} />
-                  <Text
-                    style={[customStyles.defaultText, customStyles.largeFont, styles.mapAmountText]}
-                  >
-                    52
-                  </Text>
+              <View key={i} style={styles.selectMapContainer}>
+                <View style={styles.cookieImageContainer}>
+                  <Image source={require('@assets/cookie.png')} style={styles.cookieImage} />
                 </View>
-                <Text style={[customStyles.defaultText, customStyles.smallFont]}>map_name{i}</Text>
-              </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.mapButton}
+                  onPress={() => navigation.navigate('EditObjectsScreen')}
+                >
+                  <Text
+                    style={[customStyles.defaultText, customStyles.smallFont, styles.mapButtonText]}
+                  >
+                    map_name
+                  </Text>
+                </TouchableOpacity>
+              </View>
             ))}
           </View>
         </View>
       </ScrollView>
       <TouchableOpacity
         style={styles.containerCreateButton}
-        onPress={() => navigation.navigate('EditMapScreen')}
+        onPress={() => navigation.navigate('EditObjectsScreen')}
       >
         <View style={styles.createButton}>
           <Text
             style={[customStyles.defaultText, customStyles.mediumFont, styles.createButtonText]}
           >
-            CREATE NEW MAP
+            Create
           </Text>
         </View>
       </TouchableOpacity>
@@ -50,7 +50,7 @@ const SelectMapScreen: FC = () => {
   );
 };
 
-export default SelectMapScreen;
+export default SelectEditObjectsScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -59,30 +59,35 @@ const styles = StyleSheet.create({
     paddingHorizontal: 38,
     minHeight: '100%',
     justifyContent: 'space-between',
-    alignItems: 'center',
     paddingVertical: 32,
   },
-  img: {
-    width: 482 * 0.3,
-    height: 352 * 0.3,
-  },
-  mapsContainer: {
+  selectMapContainer: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    paddingVertical: 20,
     justifyContent: 'space-between',
-    alignItems: 'flex-start',
-  },
-  mapContainer: {
-    marginBottom: 40,
     alignItems: 'center',
   },
-  mapImageContainer: {
+  cookieImageContainer: {
+    marginVertical: 16,
+  },
+  cookieImage: { width: 122 * 0.6, height: 124 * 0.6 },
+  mapButton: {
+    width: 216,
+    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 36,
+    height: 64,
+    shadowColor: 'black',
+    textShadowOffset: 10,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 4,
   },
-  mapAmountText: {
-    position: 'absolute',
+  mapButtonText: {
     color: customColor.secound,
   },
   containerCreateButton: {
