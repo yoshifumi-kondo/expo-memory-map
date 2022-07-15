@@ -48,7 +48,7 @@ const RememberCardScreen: FC = () => {
         </View>
         <TouchableOpacity
           style={styles.nextButton}
-          onPress={() => navigation.navigate('ResultCardScreen')}
+          onPress={() => navigation.navigate('AnswerCardScreen')}
         >
           <Text style={[customStyles.fontWhite, customStyles.defaultText, customStyles.mediumFont]}>
             Finish
