@@ -31,6 +31,9 @@ const customStyles = StyleSheet.create({
   fontSecond: {
     color: customColor.secound,
   },
+  fontWhite: {
+    color: 'white',
+  },
 });
 
 export default customStyles;

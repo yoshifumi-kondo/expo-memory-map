@@ -1,16 +1,15 @@
-import { SutisType } from '@customTypes/type';
+import { suits } from '@libs/variables';
+import { customColor } from '@styles/customStyles';
 import { FC } from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 const AnswerCardScreen: FC = () => {
-  const suits: Array<SutisType> = ['spade', 'heart', 'diamond', 'club'];
   const number = Array(13)
     .fill('v')
     .map((_v, i) => i + 1);
 
   return (
-    <View>
-      {/* Common comp */}
+    <View style={styles.container}>
       <View>
         <View>
           <Text>prev</Text>
@@ -64,3 +63,14 @@ const AnswerCardScreen: FC = () => {
 };
 
 export default AnswerCardScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: customColor.first,
+    paddingHorizontal: 38,
+    minHeight: '100%',
+    justifyContent: 'flex-start',
+    paddingVertical: 32,
+  },
+});

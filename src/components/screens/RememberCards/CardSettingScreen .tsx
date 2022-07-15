@@ -1,4 +1,5 @@
-import { RootStackParamList, SutisType } from '@customTypes/type';
+import { RootStackParamList } from '@customTypes/type';
+import { suits } from '@libs/variables';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import customStyles, { customColor } from '@styles/customStyles';
 import { FC } from 'react';
@@ -6,7 +7,6 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const CardSettingScreen: FC = () => {
-  const suits: Array<SutisType> = ['spade', 'club', 'heart', 'diamond'];
   const navigation = useNavigation<NavigationProp<RootStackParamList, 'CardSettingScreen'>>();
   return (
     <>
